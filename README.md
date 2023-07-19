@@ -20,21 +20,24 @@ The primary purpose of this repository is to keep track of my progress and growt
 <li>**Other**: This directory is reserved for miscellaneous code snippets, practice problems from other platforms, or any experiments that don't fit into the other categories.</li?
 </ol>
 
-_**Usage**_
+
+**Usage**
 <p>
 Feel free to explore the contents of this repository at your leisure. If you're here to learn or find solutions to specific problems, I hope you find what you're looking for. However, keep in mind that the purpose of this repository is to showcase my learning journey, which means the code may not always be perfect or optimized. Nevertheless, I'm open to feedback and suggestions for improvement.
 </p>
 
-_**Contribution**_
+
+**Contribution**
 <p>
 While this is primarily a personal repository for my practice code, I welcome contributions if you happen to come across any issues or have suggestions for better solutions. If you have valuable insights to share or spot a bug in any of the code, please feel free to raise an issue or submit a pull request. Together, we can create a more comprehensive and accurate resource for fellow learners.
 </p>
 
-**_`~~~~Contact~~~~`_**
+`Contact`
 If you'd like to get in touch with me regarding this repository or anything else, you can reach me via the following channels:
 
-Email: [Sankhadip10.das@gmail.com](mailto:your-email@example.com)
-LinkedIn: *[Sankhadip Das](https://www.linkedin.com/in/sankhadip-das/)*<br/>
+`Email:` [Sankhadip10.das@gmail.com](mailto:your-email@example.com)
+
+`LinkedIn:` *[Sankhadip Das](https://www.linkedin.com/in/sankhadip-das/)*<br/>
 
 <h6>***Final Words:***<h6>
 <p>Thank you for visiting my practice code repository! I hope you find it valuable and insightful. Remember that coding is not just about finding the right solution; it's about the journey of learning, improving, and becoming a better problem solver. Happy coding! 😊<p></p>
