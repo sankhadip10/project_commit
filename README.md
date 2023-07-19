@@ -17,7 +17,7 @@ The primary purpose of this repository is to keep track of my progress and growt
 
 <li>**Concepts**: In this directory, I store code examples and small projects created to understand specific programming concepts, design patterns, and other related topics.</li>
 
-<li>**Other**: This directory is reserved for miscellaneous code snippets, practice problems from other platforms, or any experiments that don't fit into the other categories.</li?
+<li>**Other**: This directory is reserved for miscellaneous code snippets, practice problems from other platforms, or any experiments that don't fit into the other categories.</li>
 </ol>
 
 
