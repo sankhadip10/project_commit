@@ -16,7 +16,7 @@ public class Client {
         }
     }
     public static void main(String[] args) {
-        BirdType birdType = null;
+        BirdType birdType;
         Bird bird;
 
 //        if (birdType.equals(BirdType.HEN)){
@@ -24,6 +24,6 @@ public class Client {
 //        }else if(birdType.equals(BirdType.CROW)){
 //            bird = new Crow();
 //        }
-        bird= BirdFactory.createBirdofType(birdType);
+        bird= BirdFactory.createBirdofType(BirdType.HEN);
     }
 }
