@@ -1,4 +1,4 @@
-package com.scaler.designpatterns.observer.before;
+package lld_new.observer.before;
 
 
 public class Client {

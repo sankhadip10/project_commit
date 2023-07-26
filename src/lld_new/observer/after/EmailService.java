@@ -1,4 +1,4 @@
-package com.scaler.designpatterns.observer.after;
+package lld_new.observer.after;
 
 public class EmailService implements OrderPlacedSubscriber {
 
