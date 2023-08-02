@@ -76,7 +76,8 @@ public class Student {
             return age;
         }
 
-        public String getGender() {
+        public String getGender()
+        {
             return gender;
         }
 
