@@ -13,7 +13,6 @@ public class Student {
     }
 
     private Student(Builder b){
-
         this.name=b.getName();
         this.age=b.getAge();
         this.address=b.getAddress();
@@ -86,9 +85,9 @@ public class Student {
             if(age>24 && psp<70){
                 return false;
             }
-//        if(age<18){
-//            return false;
-//        }
+        if(age<18){
+            return false;
+        }
             return true;
         }
     }

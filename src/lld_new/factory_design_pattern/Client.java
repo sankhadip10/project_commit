@@ -10,6 +10,7 @@ import java.util.List;
 public class Client {
 
     public void haveRaceofBird(List<BirdType> birdType){
+
         List<Bird> birds=new ArrayList<>();
         for (BirdType type:birdType){
             birds.add(BirdFactory.createBirdofType(type));
