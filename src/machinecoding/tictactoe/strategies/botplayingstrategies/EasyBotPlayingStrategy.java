@@ -3,6 +3,9 @@ package machinecoding.tictactoe.strategies.botplayingstrategies;
 import machinecoding.tictactoe.models.Board;
 import machinecoding.tictactoe.models.Cell;
 
-public interface BotPlayingStrategy {
-    Cell makeMove(Board board);
+public class EasyBotPlayingStrategy implements BotPlayingStrategy{
+    @Override
+    public Cell makeMove(Board board) {
+        return null;
+    }
 }

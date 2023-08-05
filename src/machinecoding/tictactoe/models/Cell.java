@@ -43,4 +43,13 @@ public class Cell {
     public Player getPlayer() {
         return player;
     }
+
+    public void display(){
+        if(getCellState().equals(CellState.EMPTY)){
+            System.out.printf("- | ");
+
+        }else {
+            System.out.printf(" "+getPlayer().getSymbol().getaChar()+" |");
+        }
+    }
 }
