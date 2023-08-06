@@ -86,8 +86,74 @@ public class Game {
         return winner;
     }
 
+    public void printResult(){
+        if(gameStatus.equals(GameStatus.ENDED)){
+            System.out.println("Game has ended");
+            System.out.println("Winner is"+winner.getName());
+        }else {
+            System.out.println("Game is draw");
+        }
+    }
+//    public void printWinner(){
+//        System.out.println(winner);
+//    }
     public void printBoard(){
        this.board.print();
+    }
+
+    private boolean validateMove(Cell cell){
+        int row=cell.getRow();
+        int col=cell.getCol();
+
+        if(row<0||col<0||row>=board.getSize() || col>=board.getSize()){
+            return false;
+        }
+        return board.getBoard().get(row).get(col).getCellState().equals(CellState.EMPTY);
+
+    }
+    public void makeMove(){
+        Player currentPlayer=players.get(currentMovePlayerIndex);
+
+        System.out.println("It is "+currentPlayer.getName() +"'s turn.");
+
+        Cell proposedCell=currentPlayer.makeMove(board);
+
+        System.out.println("Movemade at row: "+proposedCell.getRow()+
+                "col: "+proposedCell.getCol()+".");
+        if(!validateMove(proposedCell)){
+            System.out.println("Invalid move.Please try again");
+            return;
+        }
+        Cell cellInBoard=board.getBoard().get(proposedCell.getRow()).get(proposedCell.getCol());
+        cellInBoard.setCellState(CellState.FILLED);
+        cellInBoard.setPlayer(currentPlayer);
+
+        Move move=new Move(currentPlayer,cellInBoard);
+        moves.add(move);
+
+        if (checkGameWon(move, currentPlayer)) return;
+        if (checkDraw()) return;
+        currentMovePlayerIndex +=1;
+        currentMovePlayerIndex %=players.size();
+    }
+
+    private boolean checkDraw() {
+        if(moves.size()==board.getSize()*board.getSize()){
+            gameStatus=GameStatus.DRAW;
+            return true;
+        }
+        return false;
+    }
+
+    private boolean checkGameWon(Move move, Player currentPlayer) {
+        for (WinningStrategy winningStrategy:winningStrategies){
+            if(winningStrategy.checkWinner(board, move)){
+                gameStatus=GameStatus.ENDED;
+                winner= currentPlayer;
+                return true;
+            }
+        }
+        return false;
     }
 
     public static class Builder{

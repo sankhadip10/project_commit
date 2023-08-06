@@ -30,17 +30,18 @@ public class GameController {
     }
 
     public void makeMove(Game game){
-
+        game.makeMove();
     }
 
     public GameStatus getGameStatus(Game game){
         return game.getGameStatus();
     }
 
-    public void printWinner(Game game){
-
-    }
+//    public void printWinner(Game game){
+//        game.printWinner();
+//    }
 
     public void printResult(Game game) {
+        game.printResult();
     }
 }
