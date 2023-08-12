@@ -20,6 +20,7 @@ public class Bot extends Player {
 
     public BotDifficultyLevel getBotDifficultyLevel() {
 
+
         return botDifficultyLevel;
     }
 
