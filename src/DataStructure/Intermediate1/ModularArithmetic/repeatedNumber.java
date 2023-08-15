@@ -98,6 +98,7 @@ public class repeatedNumber {
         }
         scanner.close();
         repeatedNumber solution = new repeatedNumber();
+
         int result = solution.repeatedNumber1(a);
         System.out.println(result);
     }
