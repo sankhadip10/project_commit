@@ -51,18 +51,33 @@ public class reverseString {
         rev(chars,0,chars.length-1);
 
         //Reverse each word individually
-        int start=0;
-        for(int end=0;end<chars.length;end++){
-            if(chars[end]==' '  ){
-                rev(chars,start,end-1);
+        int start = 0;
+        int writeindex = 0;
+        for (int end = 0; end < chars.length; end++) {
+            if (chars[end] == ' ') {
+                if (end > start) {
+                    rev(chars, start, end - 1);
+
+                    for (int i = start; i < end; i++) {
+                        chars[writeindex++] = chars[i];
+                    }
+                    chars[writeindex++] = ' ';
+                }
                 start = end + 1;
             }
+
         }
 
         //Reverse the last word as it doesn't end with space
-        rev(chars,start,chars.length-1);
+        if(start<chars.length){
+            rev(chars,start,chars.length-1);
+            for (int i = start; i <chars.length; i++) {
+                chars[writeindex++] = chars[i];
+            }
+        }
 
-        return new String(chars);
+//        return new String(chars, 0, writeIdx > 0 && chars[writeIdx - 1] == ' ' ? writeIdx - 1 : writeIdx);
+        return new String(chars, 0, writeindex);
     }
 
     public static void rev(char[] chars, int start, int end){
@@ -77,9 +92,11 @@ public class reverseString {
     }
 
     public static void main(String[] args) {
+        System.out.print("Enter the string: ");
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
         String output =reverse(input);
+        System.out.print("Reversed String is:");
         System.out.println(output);
     }
 }
