@@ -43,6 +43,7 @@ public class AmazingSubArrays {
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the string: ");
         String inputString = scanner.nextLine();
