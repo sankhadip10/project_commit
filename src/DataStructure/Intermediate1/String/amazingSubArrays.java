@@ -29,7 +29,7 @@ package DataStructure.Intermediate1.String;
 
 import java.util.Scanner;
 
-public class AmazingSubArrays {
+public class amazingSubArrays {
     public int solve(String A) {
         int count = 0;
         for(int i = 0; i < A.length(); i++) {
@@ -48,7 +48,7 @@ public class AmazingSubArrays {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the string: ");
         String inputString = scanner.nextLine();
-        AmazingSubArrays amazingSubArrays = new AmazingSubArrays();
+        amazingSubArrays amazingSubArrays = new amazingSubArrays();
         int result = amazingSubArrays.solve(inputString);
         System.out.println("Number of Amazing Substrings: " + result);
         scanner.close();
