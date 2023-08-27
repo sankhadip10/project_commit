@@ -79,5 +79,3 @@ public class longestCommonprefix {
         System.out.println("Output: " + solution.longestCommonPrefix(list2));
     }
 }
-
-
