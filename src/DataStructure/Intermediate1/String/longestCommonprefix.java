@@ -49,6 +49,7 @@ public class longestCommonprefix {
             min = Math.min(min, A.get(i).length());
         }
 
+
         for (int i = 0; i < min; i++) {
             char c = A.get(0).charAt(i);
 
