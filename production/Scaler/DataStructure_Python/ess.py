@@ -1,35 +1,48 @@
-class Solution:
-    # @param A : list of integers
-    # @return an integer
-    def solve(self, A):
-        # sort the array
-        A.sort()
-        start = A[0]
-        length = len(A)
-        print(length)
-        for i in range(length):
-            print("i: ",i)
-            if (start!=A[i]) and (start == (length - i)):
-                print(start)
-                return 1
-            start = A[i]
-        if start==0:
-            return 1
-        return -1
+# freq_A={"1":'33','2':'45'}
+
+# for key,value in freq_A.items():
+#     print(key[0],value[0])
+
+# x = [1, 2, 3, 4, 5, 7, 77, 56, 45, 20]
+# for i in range(len(x)-1, 0,-1):
+#     print(x[i])
 
 
-def main():
-    # Create an instance of the Solution class
-    solution_instance = Solution()
 
-    # Example lists to test the function
-    test_list1 = [-4,2,0,3,4]
-    # test_list2 = [1, 2, 3, 4, 5]
+# def get_subarrays(arr):
+#     subarrays = []
+#     for start in range(len(arr)):
+#         print("---")
+#         for end in range(start + 1, len(arr) + 1):
+#             print(start)
+#             subarray = arr[start:end]
+#             subarrays.append(subarray)
+#             print(subarrays)
+#     return subarrays
+#
+# # Example usage:
+# my_array = [1, 2, 3]
+# subarrays = get_subarrays(my_array)
+# print(subarrays)
 
-    # Call the solve method and print the results
-    print("Result for test_list1:", solution_instance.solve(test_list1))  # Should return -1
-    # print("Result for test_list2:", solution_instance.solve(test_list2))  # Should return -1
+# def calculate_prefix_sum(input_array):
+#     n = len(input_array)
+#     prefix_sum = [0] * n
+#     print(prefix_sum)
+#
+# input_array = [1, 2, 3, 4, 5]
+# prefix_sum = calculate_prefix_sum(input_array)
+# print(prefix_sum)
+def calculate_prefix_sum(input_array):
+    n = len(input_array)
+    prefix_sum = [0] * n
+    print("_-_-_-_-_-_-_>",prefix_sum)
+    prefix_sum[0] = input_array[0]
+    print(prefix_sum)
+    for i in range(1, n):
+        print(i)
+        prefix_sum[i] = prefix_sum[i - 1] + input_array[i]
 
-
-if __name__ == "__main__":
-    main()
+input_array = [1, 2, 3]
+prefix_sum = calculate_prefix_sum(input_array)
+# print(prefix_sum)  # Output: [1, 3, 6, 10, 15]
