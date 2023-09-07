@@ -45,4 +45,7 @@ def calculate_prefix_sum(input_array):
 
 input_array = [1, 2, 3]
 prefix_sum = calculate_prefix_sum(input_array)
-# print(prefix_sum)  # Output: [1, 3, 6, 10, 15]
+print(prefix_sum)  # Output: [1, 3, 6, 10, 15]
+num_str=[2,3,6]
+subseq = num_str[0:1]
+print(subseq)
