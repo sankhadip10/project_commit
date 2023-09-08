@@ -33,19 +33,44 @@
 # input_array = [1, 2, 3, 4, 5]
 # prefix_sum = calculate_prefix_sum(input_array)
 # print(prefix_sum)
-def calculate_prefix_sum(input_array):
-    n = len(input_array)
-    prefix_sum = [0] * n
-    print("_-_-_-_-_-_-_>",prefix_sum)
-    prefix_sum[0] = input_array[0]
-    print(prefix_sum)
-    for i in range(1, n):
-        print(i)
-        prefix_sum[i] = prefix_sum[i - 1] + input_array[i]
+# def calculate_prefix_sum(input_array):
+#     n = len(input_array)
+#     prefix_sum = [0] * n
+#     print("_-_-_-_-_-_-_>",prefix_sum)
+#     prefix_sum[0] = input_array[0]
+#     print(prefix_sum)
+#     for i in range(1, n):
+#         print(i)
+#         prefix_sum[i] = prefix_sum[i - 1] + input_array[i]
+#
+# input_array = [1, 2, 3]
+# prefix_sum = calculate_prefix_sum(input_array)
+# print(prefix_sum)  # Output: [1, 3, 6, 10, 15]
+# num_str=[2,3,6]
+# subseq = num_str[0:1]
+# print(subseq)
 
-input_array = [1, 2, 3]
-prefix_sum = calculate_prefix_sum(input_array)
-print(prefix_sum)  # Output: [1, 3, 6, 10, 15]
-num_str=[2,3,6]
-subseq = num_str[0:1]
-print(subseq)
+
+def printt(n):
+    print("yyyy")
+    if n == 1:
+        print(n)
+        return
+
+    printt(n - 1)
+    print(n)
+
+printt(5)
+
+
+# def printt(n):
+#     if n == 1:
+#         print(n)
+#         return  # This ensures that the function doesn't proceed further once n is 1.
+#
+#     printt(n - 1)
+#     print(n)
+#
+#
+# printt(5)  # This will print numbers 1 to 5
+
