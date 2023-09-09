@@ -61,6 +61,16 @@ def printt(n):
     print(n)
 
 printt(5)
+def printt(n):
+    print("yyyy")
+    if n == 1:
+        print(n)
+        return
+
+    printt(n - 1)
+    print(n)
+
+printt(5)
 
 
 # def printt(n):
