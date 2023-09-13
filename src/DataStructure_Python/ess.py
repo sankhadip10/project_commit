@@ -51,29 +51,29 @@
 # print(subseq)
 
 
-def printt(n):
-    print("yyyy")
-    if n == 1:
-        print(n)
-        return
-
-    printt(n - 1)
-    print(n)
-
-printt(5)
-def printt(n):
-    print("yyyy")
-    if n == 1:
-        print(n)
-        return
-
-    printt(n - 1)
-    print(n)
-
-
-
-
-printt(5)
+# def printt(n):
+#     print("yyyy")
+#     if n == 1:
+#         print(n)
+#         return
+#
+#     printt(n - 1)
+#     print(n)
+#
+# printt(5)
+# def printt(n):
+#     print("yyyy")
+#     if n == 1:
+#         print(n)
+#         return
+#
+#     printt(n - 1)
+#     print(n)
+#
+#
+#
+#
+# printt(5)
 
 
 # def printt(n):
@@ -87,3 +87,48 @@ printt(5)
 #
 # printt(5)  # This will print numbers 1 to 5
 
+
+# def twoSum(nums, target):
+#     num_map = {}  # To store the number and its index
+#
+#     for i, num in enumerate(nums):
+#         complement = target - num
+#         print(complement)
+#         if complement in num_map:
+#             # Adding 1 to each index because we're not using 0-based indexing.
+#             return [num_map[complement] + 1, i + 1]
+#         num_map[num] = i
+#         print("--",num_map)
+#
+# twoSum([7,11,2,15],9)
+
+# list1 = [(1, 'a'), (2, 'b')]
+# l1,l2=zip(*list1)
+# print(l1)
+# print(l2)
+
+# def is_less_or_equal(word1, word2):
+#     for c1, c2 in zip(word1, word2):
+#         print(c1,c2)
+#
+# is_less_or_equal('sclaer','gaterj')
+
+# A = ["hello", "scaler", "interviewbit"]
+# for i in range(len(A) - 1):
+#     print(A[i])
+
+#
+# for i in range(0, 9, 3):
+#     for j in range(0, 9, 3):
+#         print([i])
+#         print([j])
+
+def isValidSudoku(board):
+    for i in range(9):
+        # Check row
+        row = [board[i][j] for j in range(9) if board[i][j] != '.']
+        print(row)
+        if len(row) != len(set(row)):
+            return 0
+
+isValidSudoku(["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"])
