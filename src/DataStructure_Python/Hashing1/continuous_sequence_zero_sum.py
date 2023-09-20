@@ -63,7 +63,5 @@ class Solution:
             print(f"Input: {test}, Output: {sol.lszero(test)}")
 
 
-
-
 if __name__ == "__main__":
     main()
