@@ -123,13 +123,52 @@
 #         print([i])
 #         print([j])
 
-def isValidSudoku(board):
-    for i in range(9):
-        # Check row
-        row = [board[i][j] for j in range(9) if board[i][j] != '.']
-        print(row)
-        if len(row) != len(set(row)):
-            return 0
+# def isValidSudoku(board):
+#     for i in range(9):
+#         # Check row
+#         row = [board[i][j] for j in range(9) if board[i][j] != '.']
+#         print(row)
+#         if len(row) != len(set(row)):
+#             return 0
+#
+#
+# isValidSudoku(["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"])
+# A="bcdaef"
+# print(min(A))
+# first_char_index = A.index(min(A))
+# print(first_char_index)
 
+# A='abcdab'
+# freq = {}
+# for char in A:
+#     freq[char] = freq.get(char, 0) + 1
+#     print(freq)
 
-isValidSudoku(["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"])
+class Solution:
+    # @param A : string
+    # @return a strings
+    def solve(self, A):
+        minchar = 'z'
+        idx = 1000000000
+        for i in range(len(A) - 1):
+            if A[i] < minchar:
+                minchar = A[i]
+                idx = i
+
+        minchar2 = 'z'
+        for i in range(idx + 1, len(A)):
+            if (A[i] < minchar2):
+                minchar2 = A[i]
+
+        ans = minchar + minchar2
+        return ans
+
+def main():
+    solution =Solution()
+    A="badc"
+    res=solution.solve(A)
+    print(res)
+
+if __name__ == "__main__":
+    main()
+
