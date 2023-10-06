@@ -155,6 +155,7 @@
 #                 minchar = A[i]
 #                 idx = i
 #
+
 #         minchar2 = 'z'
 #         for i in range(idx + 1, len(A)):
 #             if (A[i] < minchar2):
